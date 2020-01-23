@@ -1,0 +1,20 @@
+<!-- ########## H E A D E R ########## -->
+<section class="overflow-hidden py-0" id="top">
+    <div class="bg-holder overlay parallax" style="background-image:url(/mysite1/mytheme/img/Dawn_of_Healing.jpg);background-position: center 58%;"></div>    
+    <div class="header-overlay"></div>
+    <div class="container" data-zanim-xs='{"duration":"1.5","delay":"0.1"}'>
+        <div class="d-flex align-items-center pt-10 pb-6">
+            <div class="header-text">
+                <div class="overflow-hidden">
+                    <h1 class="display-3 text-400 fs-4 fs-md-5 font-weight-medium">@Html.Raw(ViewData["HeaderTitle"])</h1>
+                    <p class="text-uppercase text-400 ls-2 mt-2 my-0 pb-0 pt-2 font-weight-medium">@ViewData["HeaderLine1"]</p>
+                    <p class="my-0 py-0"><span class="fs-7 logo-secondary-style-light">pr<span class="logo-primary-style-light">e</span>vidence<sup class="fs-3 font-weight-light">&reg;</sup></span></p>
+                    <p class="text-uppercase fs-1 text-400 ls-2 my-0 py-0 font-weight-medium">@ViewData["HeaderLine2"]@Html.Raw(ViewData["TM_HeaderLine2"])</p>
+                </div>
+                <partial name="_CallToActionLight" />
+                <partial name="_DownLink" />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / end  H E A D E R -->

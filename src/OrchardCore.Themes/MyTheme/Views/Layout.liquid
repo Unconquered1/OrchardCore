@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ Culture.Name }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% render_section "HeadMeta", required: false %}
+    <title>{% page_title Site.SiteName %}</title>
+    {% resources type: "Meta" %}
+
+    <!-- Bootstrap core CSS -->
+    {% style src:"~/MyTheme/lib/bootstrap/dist/css/bootstrap.min.css", debug_src:"~/MyTheme/lib/bootstrap/dist/css/bootstrap.min.css" %}
+
+    <!-- Custom fonts for this template -->
+    {% style name:"theagencytheme-vendor-font-awesome", version:"5" %}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Mine -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+
+
+    <!-- Custom styles for this template -->    
+    {% style src:"~/MyTheme/lib/non-npm/owl.carousel/owl.carousel.css", debug_src:"~/MyTheme/lib/non-npm/owl.carousel/owl.carousel.css" %}
+    {% style src:"~/MyTheme/lib/non-npm/remodal/remodal.css", debug_src:"~/MyTheme/lib/non-npm/remodal/remodal.css" %}
+    {% style src:"~/MyTheme/lib/non-npm/remodal/remodal-default-theme.css", debug_src:"~/MyTheme/lib/non-npm/remodal/remodal-default-theme.css" %}
+    {% style src:"~/MyTheme/lib/non-npm/theme/theme.css", debug_src:"~/MyTheme/lib/non-npm/theme/theme.css" %}
+    {% style src:"~/MyTheme/css/site.css", debug_src:"~/MyTheme/css/site.css" %}
+    {% style src:"~/MyTheme/lib/non-npm/GDPR_Alert/cookiealert.css", debug_src:"~/MyTheme/css/cookiealert.css" %}
+
+    <!-- Bootstrap core JavaScript -->
+    {% script src:"~/MyTheme/lib/jquery/dist/jquery.min.js", debug_src:"~/MyTheme/lib/jquery/dist/jquery.min.js", at:"Foot" %}
+    {% script src:"~/MyTheme/lib/jquery-validation/dist/jquery.validate.min.js", debug_src:"~/MyTheme/lib/jquery-validation/dist/jquery.validate.min.js", at:"Foot" %}
+    {% script src:"~/MyTheme/lib/popper/popper.min.js", debug_src:"~/MyTheme/lib/popper/popper.min.js", at:"Foot" %}
+    {% script src:"~/MyTheme/lib/bootstrap/dist/js/bootstrap.min.js", at:"Foot" %}    
+    {% script src:"~/MyTheme/lib/bootstrap/dist/js/bootstrap.bundle.min.js", debug_src:"~/MyTheme/lib/bootstrap/dist/js/bootstrap.bundle.min.js", at:"Foot" %}
+    
+    <!-- Plugin JavaScript -->    
+    {% script src:"~/MyTheme/lib/non-npm/GDPR_Alert/cookiealert.js", debug_src:"~/MyTheme/lib/non-npm/GDPR_Alert/cookiealert.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/plugins/plugins.min.js", debug_src:"~/MyTheme/lib/non-npm/plugins/plugins.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/stickyfilljs/stickyfill.min.js", debug_src:"~/MyTheme/lib/non-npm/stickyfilljs/stickyfill.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/fortawesome/all.min.js", debug_src:"~/MyTheme/lib/non-npm/fortawesome/all.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/rellax/rellax.min.js", debug_src:"~/MyTheme/lib/non-npm/rellax/rellax.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/progressbar/progressbar.min.js", debug_src:"~/MyTheme/lib/non-npm/progressbar/progressbar.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/isotope-layout/isotope.pkgd.min.js", debug_src:"~/MyTheme/lib/non-npm/isotope-layout/isotope.pkgd.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/isotope-packery/packery-mode.pkgd.min.js", debug_src:"~/MyTheme/lib/non-npm/isotope-packery/packery-mode.pkgd.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/owl.carousel/owl.carousel.js", debug_src:"~/MyTheme/lib/non-npm/owl.carousel/owl.carousel.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/remodal/remodal.min.js", debug_src:"~/MyTheme/lib/non-npm/remodal/remodal.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/hover-dir/jquery.hoverdir.js", debug_src:"~/MyTheme/lib/non-npm/hover-dir/jquery.hoverdir.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/typed/typed.js", debug_src:"~/MyTheme/lib/non-npm/typed/typed.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/theme/theme.min.js", debug_src:"~/MyTheme/lib/non-npm/theme/theme.min.js", at:"Foot"  %}    
+
+    <!-- Contact form JavaScript -->
+
+    
+    {% resources type: "HeadScript" %}
+    {% resources type: "HeadLink" %}
+    {% resources type: "Stylesheet" %}
+
+</head>
+<body id="page-top" dir="{{ Culture.Dir }}">
+    {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
+    {% render_section "Header", required: false %}
+    <div class="container" id="main">
+		{% render_section "Messages", required: false %}
+        {% render_section "Content" %}
+    </div>
+    {% render_section "Footer", required: false %}
+    {% resources type: "FootScript" %}
+
+</body>
+</html>

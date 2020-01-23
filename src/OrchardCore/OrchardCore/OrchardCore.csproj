@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="ncrontab" />
-    <PackageReference Include="NodaTime" />
+    <PackageReference Include="NodaTime" Version="3.0.0-beta01" />
   </ItemGroup>
 
   <ItemGroup>

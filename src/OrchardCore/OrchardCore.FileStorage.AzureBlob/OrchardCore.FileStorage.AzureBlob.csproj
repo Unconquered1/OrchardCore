@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.Storage.Blob"/>
+    <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.1.2" />
   </ItemGroup>
 
   <ItemGroup>
