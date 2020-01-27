@@ -61,7 +61,8 @@
 </head>
 <body id="page-top" dir="{{ Culture.Dir }}">
     {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
-    {% shape "header", alias: "alias:header", cache_id: "header", cache_tag: "alias:header" %}    
+    {% comment %} {% shape "header", alias: "alias:header", cache_id: "header", cache_tag: "alias:header" %} {% endcomment %}
+    {% render_section "Header", required: false %}    
     <div class="container" id="main">
 		{% render_section "Messages", required: false %}
         {% render_section "Content" %}
