@@ -364,6 +364,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCore.Contents.TagHel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTheme", "src\OrchardCore.Themes\MyTheme\MyTheme.csproj", "{77B3A860-545B-4778-8D87-C575F9A33318}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTheTheme", "src\OrchardCore.Themes\MyTheTheme\MyTheTheme.csproj", "{6A0DAA95-4D79-4E60-A037-4A30D94A32DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -974,6 +976,10 @@ Global
 		{77B3A860-545B-4778-8D87-C575F9A33318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77B3A860-545B-4778-8D87-C575F9A33318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77B3A860-545B-4778-8D87-C575F9A33318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A0DAA95-4D79-4E60-A037-4A30D94A32DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0DAA95-4D79-4E60-A037-4A30D94A32DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0DAA95-4D79-4E60-A037-4A30D94A32DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0DAA95-4D79-4E60-A037-4A30D94A32DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1145,6 +1151,7 @@ Global
 		{85610AB6-07E8-45E3-9C48-34D952CC5DD2} = {B8D16C60-99B4-43D5-A3AD-4CD89AF39B25}
 		{6236734E-507B-461B-8E92-068886058E84} = {F23AC6C2-DE44-4699-999D-3C478EF3D691}
 		{77B3A860-545B-4778-8D87-C575F9A33318} = {AF3BADEA-CC93-4116-B3C1-F8D074EBEE4F}
+		{6A0DAA95-4D79-4E60-A037-4A30D94A32DE} = {AF3BADEA-CC93-4116-B3C1-F8D074EBEE4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46A1D25A-78D1-4476-9CBF-25B75E296341}

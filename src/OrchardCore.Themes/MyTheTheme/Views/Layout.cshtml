@@ -1,0 +1,69 @@
+@* Based on https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/ *@
+<!DOCTYPE html>
+<html lang="@Orchard.CultureName()">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@RenderTitleSegments(Site.SiteName, "before")</title>
+    <link type="image/x-icon" rel="shortcut icon" href="~/TheTheme/favicon.ico" />
+    <script asp-name="bootstrap" version="4" at="Foot"></script>
+    <style asp-name="thetheme-bootstrap-oc" version="1"></style>
+    <style asp-name="font-awesome" version="5"></style>
+    <style asp-src="~/MyTheTheme/css/sticky-footer-navbar.css"></style>
+    <!-- Custom styles for this template -->
+    <style asp-src="~/MyTheme/lib/non-npm/owl.carousel/owl.carousel.css"></style>
+    <style asp-src="~/MyTheme/lib/non-npm/remodal/remodal.css"></style>
+    <style asp-src="~/MyTheme/lib/non-npm/remodal/remodal-default-theme.css"></style>
+    <style asp-src="~/MyTheme/lib/non-npm/theme/theme.css"></style>
+    <style asp-src="~/MyTheme/css/site.css"></style>
+    <style asp-src="~/MyTheme/lib/non-npm/GDPR_Alert/cookiealert.css"></style>
+
+    <!-- Bootstrap core JavaScript -->
+    {% script src:"~/MyTheme/lib/jquery/dist/jquery.min.js", debug_src:"~/MyTheme/lib/jquery/dist/jquery.min.js", at:"Foot" %}
+    {% script src:"~/MyTheme/lib/jquery-validation/dist/jquery.validate.min.js", debug_src:"~/MyTheme/lib/jquery-validation/dist/jquery.validate.min.js", at:"Foot" %}
+    {% script src:"~/MyTheme/lib/popper/popper.min.js", debug_src:"~/MyTheme/lib/popper/popper.min.js", at:"Foot" %}
+    {% script src:"~/MyTheme/lib/bootstrap/dist/js/bootstrap.min.js", at:"Foot" %}
+    {% script src:"~/MyTheme/lib/bootstrap/dist/js/bootstrap.bundle.min.js", debug_src:"~/MyTheme/lib/bootstrap/dist/js/bootstrap.bundle.min.js", at:"Foot" %}
+
+    <!-- Plugin JavaScript -->
+    {% script src:"~/MyTheme/lib/non-npm/GDPR_Alert/cookiealert.js", debug_src:"~/MyTheme/lib/non-npm/GDPR_Alert/cookiealert.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/plugins/plugins.min.js", debug_src:"~/MyTheme/lib/non-npm/plugins/plugins.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/stickyfilljs/stickyfill.min.js", debug_src:"~/MyTheme/lib/non-npm/stickyfilljs/stickyfill.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/fortawesome/all.min.js", debug_src:"~/MyTheme/lib/non-npm/fortawesome/all.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/rellax/rellax.min.js", debug_src:"~/MyTheme/lib/non-npm/rellax/rellax.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/progressbar/progressbar.min.js", debug_src:"~/MyTheme/lib/non-npm/progressbar/progressbar.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/isotope-layout/isotope.pkgd.min.js", debug_src:"~/MyTheme/lib/non-npm/isotope-layout/isotope.pkgd.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/isotope-packery/packery-mode.pkgd.min.js", debug_src:"~/MyTheme/lib/non-npm/isotope-packery/packery-mode.pkgd.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/owl.carousel/owl.carousel.js", debug_src:"~/MyTheme/lib/non-npm/owl.carousel/owl.carousel.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/remodal/remodal.min.js", debug_src:"~/MyTheme/lib/non-npm/remodal/remodal.min.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/hover-dir/jquery.hoverdir.js", debug_src:"~/MyTheme/lib/non-npm/hover-dir/jquery.hoverdir.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/typed/typed.js", debug_src:"~/MyTheme/lib/non-npm/typed/typed.js", at:"Foot"  %}
+    {% script src:"~/MyTheme/lib/non-npm/theme/theme.min.js", debug_src:"~/MyTheme/lib/non-npm/theme/theme.min.js", at:"Foot"  %}
+    <resources type="Meta" />
+    <resources type="HeadLink" />
+    <resources type="Stylesheet" />
+    <resources type="HeadScript" />
+</head>
+<body dir="@Orchard.CultureDir()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="~/#">@Site.SiteName</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            TEST TEXT IS HERE
+            <div class="collapse navbar-collapse" id="navbar">
+                <menu alias="alias:main-menu" cache-id="main-menu" cache-fixed-duration="00:05:00" cache-tag="alias:main-menu" />
+                <partial name="LoginMenu" />
+            </div>
+        </div>
+    </nav>
+    @await RenderSectionAsync("Header", required: false)
+    <main role="main" class="container">
+        @await RenderSectionAsync("Messages", required: false)
+        @await RenderBodyAsync()
+    </main>
+    @await RenderSectionAsync("Footer", required: false)
+    <resources type="FootScript" />
+</body>
+</html>
